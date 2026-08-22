@@ -1,4 +1,4 @@
-Notice: this program is AI generated as an educational exercise.
+Notice: this program is AI generated and was created as an educational exercise.
 
 # gpu-notifier
 

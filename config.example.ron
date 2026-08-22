@@ -1,0 +1,26 @@
+GpuNotifier(
+    gpus: [
+        PerGpuConfig(
+            gpu_id: 0,
+            enabled: true,
+            parser: AmdSmi,
+            monitor_interval: Seconds(60.0),
+            monitor_command: "amd-smi metric --json",
+            monitor_threshold: PowerBelow(50.0),
+            monitor_grace: Some(1),
+            notify_grace: Some(1),
+            notify_command: "ffplay -v 0 -nodisp -autoexit ~/.config/gpu-notifier/notify.mp3",
+        ),
+        PerGpuConfig(
+            gpu_id: 1,
+            enabled: true,
+            parser: AmdSmi,
+            monitor_interval: Seconds(60.0),
+            monitor_command: "amd-smi metric --json",
+            monitor_threshold: PowerBelow(50.0),
+            monitor_grace: Some(1),
+            notify_grace: Some(1),
+            notify_command: "ffplay -v 0 -nodisp -autoexit ~/.config/gpu-notifier/notify.mp3",
+        ),
+    ],
+)
